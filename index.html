@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>GREEN-API Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>GREEN-API WhatsApp Demo</h1>
+
+    <section class="connection">
+      <h2>Подключение</h2>
+      <label>
+        idInstance:
+        <input id="idInstance" type="text" placeholder="1101789010" />
+      </label>
+      <label>
+        ApiTokenInstance:
+        <input id="apiTokenInstance" type="password" placeholder="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" />
+      </label>
+
+      <div class="buttons-row">
+        <button id="btnGetSettings">getSettings</button>
+        <button id="btnGetState">getStateInstance</button>
+      </div>
+    </section>
+
+    <section class="messaging">
+      <h2>Отправка сообщений</h2>
+
+      <label>
+        Телефон (без +, в формате 79991234567):
+        <input id="phone" type="text" placeholder="79991234567" />
+      </label>
+
+      <label>
+        Текст сообщения:
+        <input id="messageText" type="text" placeholder="Hello World!" />
+      </label>
+
+      <button id="btnSendMessage">sendMessage</button>
+
+      <label>
+        Телефон для файла:
+        <input id="filePhone" type="text" placeholder="79991234567" />
+      </label>
+
+      <label>
+        URL файла:
+        <input id="fileUrl" type="text" placeholder="https://my.site.com/img/horse.png" />
+      </label>
+
+      <button id="btnSendFile">sendFileByUrl</button>
+    </section>
+
+    <section class="response">
+      <h2>Ответ:</h2>
+      <textarea id="response" readonly></textarea>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
